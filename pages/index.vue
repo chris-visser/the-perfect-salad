@@ -5,7 +5,7 @@
     </div>
     <ul>
       <li v-for="{ title, items } in categories" :key="title">
-        <img src="" :alt="items[0].title">
+        <img :src="items[0].image" :alt="items[0].title">
         <div class="item-body">
           <strong>{{ title }}</strong><br />
           {{ items[0].title }}
@@ -50,21 +50,29 @@ export default {
       categories: this.shuffleItems([{
         title: 'Base',
         items: [{
-          title: 'Lettuce'
+          title: 'Lettuce',
+          image: '/lettuce.webp'
         }, {
-          title: 'Spinach'
+          title: 'Spinach',
+          image: '/spinach.jfif'
         }, {
-          title: 'Kale'
+          title: 'Kale',
+          image: '/kale.jfif'
         }, {
-          title: 'Chard'
+          title: 'Chard',
+          image: '/chard.jfif'
         }, {
-          title: 'Collards'
+          title: 'Collards',
+          image: '/collards.webp'
         }, {
-          title: 'Arugula'
+          title: 'Arugula',
+          image: '/arugula.jfif'
         }, {
-          title: 'Pea Shoots'
+          title: 'Pea Shoots',
+          image: '/pea-shoots.jpeg'
         }, {
-          title: 'Cabbage'
+          title: 'Cabbage',
+          image: '/cabbage.png'
         }]
       }, {
         title: 'Crunchy Stuff',
