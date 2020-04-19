@@ -5,6 +5,9 @@
         {{ items[0].title }}
       </card>
     </div>
+    <div class="text-center">
+      <b-button @click="randomize">Try again</b-button>
+    </div>
   </section>
 </template>
 
@@ -12,22 +15,22 @@
 import Card from '~/components/Card'
 
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  var currentIndex = array.length, temporaryValue, randomIndex
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
 
     // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex -= 1
 
     // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+    temporaryValue = array[currentIndex]
+    array[currentIndex] = array[randomIndex]
+    array[randomIndex] = temporaryValue
   }
 
-  return array;
+  return array
 }
 
 
@@ -40,9 +43,9 @@ export default {
 
   data() {
     return {
-      categories: [{
+      categories: this.shuffleItems([{
         title: 'Base',
-        items: shuffle([{
+        items: [{
           title: 'Lettuce'
         }, {
           title: 'Spinach'
@@ -58,10 +61,10 @@ export default {
           title: 'Pea Shoots'
         }, {
           title: 'Cabbage'
-        }])
+        }]
       }, {
         title: 'Crunchy Stuff',
-        items: shuffle([{
+        items: [{
           title: 'Carrots'
         }, {
           title: 'Sprouts'
@@ -77,10 +80,10 @@ export default {
           title: 'Apple'
         }, {
           title: 'Seeds'
-        }])
+        }]
       }, {
         title: 'Something Soft',
-        items: shuffle([{
+        items: [{
           title: 'Roasted Sweet Potatoes'
         }, {
           title: 'Cheese'
@@ -92,10 +95,10 @@ export default {
           title: 'Rice'
         }, {
           title: 'Olives'
-        }])
+        }]
       }, {
         title: 'The Unexpected',
-        items: shuffle([{
+        items: [{
           title: 'Watermelon Cubes'
         }, {
           title: 'Cottage Cheese'
@@ -107,10 +110,10 @@ export default {
           title: 'Pickled Veggies'
         }, {
           title: 'Herbs'
-        }])
+        }]
       }, {
         title: 'Protein',
-        items: shuffle([{
+        items: [{
           title: 'Beans'
         }, {
           title: 'Eggs'
@@ -128,10 +131,10 @@ export default {
           title: 'Quinoa'
         }, {
           title: 'Nuts'
-        }])
+        }]
       }, {
         title: 'Dressing',
-        items: shuffle([{
+        items: [{
           title: 'Mustard-based'
         }, {
           title: 'Tahini-based'
@@ -143,9 +146,29 @@ export default {
           title: 'Pesto-based'
         }, {
           title: 'Fruity'
-        }])
-      }]
+        }]
+      }])
+    }
+  },
+  methods: {
+    shuffleItems(categories) {
+      return categories.map(({ title, items }) => ({
+        title,
+        items: shuffle(items)
+      }))
+    },
+    randomize() {
+      this.categories = this.shuffleItems(this.categories)
     }
   }
 }
 </script>
+
+<style>
+.card-header {
+  height: 72px;
+}
+.card-footer-item {
+  height: 72px;
+}
+</style>
