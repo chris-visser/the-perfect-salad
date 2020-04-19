@@ -1,13 +1,17 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <card v-for="{ title, items } in categories" :key="title" :title="title" icon="foo">
-        {{ items[0].title }}
-      </card>
-    </div>
     <div class="text-center">
       <b-button @click="randomize">Try again</b-button>
     </div>
+    <ul>
+      <li v-for="{ title, items } in categories" :key="title">
+        <img src="" :alt="items[0].title">
+        <div class="item-body">
+          <strong>{{ title }}</strong><br />
+          {{ items[0].title }}
+        </div>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -165,10 +169,24 @@ export default {
 </script>
 
 <style>
-.card-header {
-  height: 72px;
+ul {
+  list-style: none;
+  width: 100%;
+  border-top: 1px solid #cccccc;
 }
-.card-footer-item {
-  height: 72px;
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+img {
+  margin-right: 20px;
+  border: 1px solid #cccccc;
+  height: 60px;
+  width: 60px;
+}
+button {
+  margin-bottom: 30px;
 }
 </style>
