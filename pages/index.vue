@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="text-center">
-      <b-button @click="randomize">Try again</b-button>
+      <b-button @click="randomize">Hussle my lattice, bro</b-button>
     </div>
     <ul>
       <li v-for="{ title, items } in categories" :key="title">
