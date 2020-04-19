@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <card v-for="{ title, items } in categories" :key="title" icon="foo">
+      <card v-for="{ title, items } in categories" :key="title" :title="title" icon="foo">
         {{ items[0].title }}
       </card>
     </div>
@@ -60,7 +60,7 @@ export default {
           title: 'Cabbage'
         }])
       }, {
-        title: 'Something Crunchy',
+        title: 'Crunchy Stuff',
         items: shuffle([{
           title: 'Carrots'
         }, {
@@ -94,7 +94,7 @@ export default {
           title: 'Olives'
         }])
       }, {
-        title: 'Something Unexpected',
+        title: 'The Unexpected',
         items: shuffle([{
           title: 'Watermelon Cubes'
         }, {
