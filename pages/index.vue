@@ -1,7 +1,7 @@
 <template>
   <section class="section">
-    <div v-for="{ title, items } in categories" :key="title" class="columns is-mobile">
-      <card>
+    <div class="columns is-mobile">
+      <card v-for="{ title, items } in categories" :key="title">
         {{ items[0].title }}
       </card>
     </div>
