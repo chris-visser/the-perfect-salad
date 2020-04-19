@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
 
     <section class="main-content columns">
       <aside class="column is-2 section">
@@ -13,5 +13,21 @@
         <nuxt />
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>The Salad Selector</strong> by <a href="https://thespider.netlify.app/">Chris Visser</a>.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
+
+<style>
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+</style>
