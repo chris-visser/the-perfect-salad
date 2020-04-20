@@ -77,30 +77,41 @@ export default {
       }, {
         title: 'Crunchy Stuff',
         items: [{
-          title: 'Carrots'
+          title: 'Carrots',
+          image: '/carrots.png'
         }, {
-          title: 'Sprouts'
+          title: 'Sprouts',
+          image: '/sprouds.png'
         }, {
-          title: 'Cucumber'
+          title: 'Cucumber',
+          image: '/cucumber.jfif'
         }, {
-          title: 'Croutons'
+          title: 'Croutons',
+          image: '/croutons.jfif'
         }, {
-          title: 'Zucchini'
+          title: 'Zucchini',
+          image: '/zucchini.jfif'
         }, {
-          title: 'Bell Pepper'
+          title: 'Bell Pepper',
+          image: '/bell-pepper.jfif'
         }, {
-          title: 'Apple'
+          title: 'Apple',
+          image: '/apple.jfif'
         }, {
-          title: 'Seeds'
+          title: 'Seeds & Nuts',
+          image: '/seeds.jfif'
         }]
       }, {
         title: 'Something Soft',
         items: [{
-          title: 'Roasted Sweet Potatoes'
+          title: 'Roasted Sweet Potatoes',
+          image: '/sweet-potatoes.jpg'
         }, {
-          title: 'Cheese'
+          title: 'Cheese',
+          image: '/cheese.jfif'
         }, {
-          title: 'Avocado'
+          title: 'Avocado',
+          image: '/avocado.jfif'
         }, {
           title: 'Tomatoes'
         }, {
