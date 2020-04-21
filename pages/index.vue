@@ -113,37 +113,50 @@ export default {
           title: 'Avocado',
           image: '/avocado.jfif'
         }, {
-          title: 'Tomatoes'
+          title: 'Tomatoes',
+          image: '/tomatoes.jfif'
         }, {
-          title: 'Rice'
+          title: 'Rice',
+          image: '/rice.jpg'
         }, {
-          title: 'Olives'
+          title: 'Olives',
+          image: '/olives.jfif'
         }]
       }, {
         title: 'The Unexpected',
         items: [{
-          title: 'Watermelon Cubes'
+          title: 'Watermelon Cubes',
+          image: '/watermelon-cubes.jfif'
         }, {
-          title: 'Cottage Cheese'
+          title: 'Cottage Cheese',
+          image: '/cottage-cheese.jpg'
         }, {
-          title: 'Hummus'
+          title: 'Hummus',
+          image: '/hummus.jpg'
         }, {
-          title: 'Bacon'
+          title: 'Bacon',
+          image: '/bacon.jfif'
         }, {
-          title: 'Pickled Veggies'
+          title: 'Pickled Veggies',
+          image: '/pickled-veggies.jpg'
         }, {
-          title: 'Herbs'
+          title: 'Herbs',
+          image: '/herbs.jfif'
         }]
       }, {
         title: 'Protein',
         items: [{
-          title: 'Beans'
+          title: 'Beans',
+          image: '/beans.jfif'
         }, {
-          title: 'Eggs'
+          title: 'Eggs',
+          image: '/eggs.jfif'
         }, {
-          title: 'Tuna'
+          title: 'Tuna',
+          image: '/tuna.jfif'
         }, {
-          title: 'Chicken'
+          title: 'Chicken',
+          image: '/chicken.'
         }, {
           title: 'Steak'
         }, {
